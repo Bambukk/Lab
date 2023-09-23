@@ -1,11 +1,12 @@
 import React from 'react';
-
+import Header from './components/Header';
 const App = () => {
-  console.log('negr can work');
-  console.log('Method steal');
+;
   console.log('Method cry');
   return (
-    <div>App</div>
+    <>
+      <Header></Header>
+    </>
   )
 }
 
