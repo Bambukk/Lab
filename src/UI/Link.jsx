@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Linka = styled.a`
+const LinkWrap = styled.a`
     display:block;
     color: orange;
     font-size: 18px;
@@ -9,11 +9,11 @@ const Linka = styled.a`
 `
 
 
-const Title = ({ children}) => {
+const Link = ({ children}) => {
   return (
-    <Linka>{children}</Linka>
+    <LinkWrap>{children}</LinkWrap>
   )
 }
 
 
-export default Title;
+export default Link;
