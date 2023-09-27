@@ -6,6 +6,7 @@ const LinkWrap = styled.a`
     color: orange;
     font-size: 18px;
     font-weight: bold;
+    cursor:pointer;
 `
 
 

@@ -11,6 +11,7 @@ export default createGlobalStyle`
 
     body {
         font-family: 'Croissant One', cursive;
+        
     }
 
     button, input {

@@ -8,7 +8,7 @@ const Container = styled.header`
     width:100%;
     display:flex;
     justify-content:space-between;
-    background-color:#dc143c;
+    background-color:rgb(255,10,5);
 `
 
 const NavBar = styled.div`

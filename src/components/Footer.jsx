@@ -5,9 +5,10 @@ import image from '../images/image 9.png';
 const Container = styled.footer`
     width:100%;
     background-color:gray;
-    float:bottom;
     display:flex;
     flex-direction: column; 
+    padding:10px 0px 20px 0px;
+    
 `
 
 const Signature = styled.p`
