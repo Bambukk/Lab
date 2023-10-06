@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Montserrat:wght@400;700&family=Outfit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--grayscale-01, #181818);
+}
+
+button, input {
+    border: none;
+    background: none;
+}
+
+input:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+.active {
+    text-decoration: underline;
+}
+
+.container {
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.NavBar { 
+    background-color:  var(--secondary-02, #FFAA4C);
+}
+
+.NavBarButton {
+    padding: 9px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px 20px 0px 0px;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+}
+
+
+.ActiveButton {
+    background: var(--grayscale-01, #181818);
+    color: var(--grayscale-07, #FFF);
+}
+
+.Logo {
+    display:flex;
+    align-items: center;
+}
+
+header {
+    padding-top: 7px;
+}
+
+.HeaderWrap {
+    display:flex;
+    justify-content: space-between;
+}
+
+.HeaderButton {
+    padding: 16px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 16px;
+    background: var(--primary-01, #954CED);
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color:#FFF
+}
+
+.HeaderTitle {
+    color: var(--grayscale-07, #FFF);
+    text-align: center;
+    font-feature-settings: 'ss07' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss01' on, 'numr' on, 'dnom' on;
+    font-family: Outfit;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px; /* 45.946% */
+    text-transform: lowercase;
+}
+
+.Hero {
+    height:100vh;
+    background-image: url('../images/HeroBack.png');
+    background: no-repeat right/43% url('../images/HeroBack.png');
+    background-position: bottom 180px right 0px;
+}
+
+.HeroWrap {
+    width:671px;
+    margin-top: 80px;
+    margin-left: 110px;
+}
+
+.HeroMainTitle {
+    color: var(--grayscale-07, #FFF);
+    font-feature-settings: 'liga' off;
+    /* Title/T2_Bold_96 */
+    font-family: Outfit;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106%; 
+    margin-bottom: 20px;
+}
+
+.HeroSignature {
+    color: var(--grayscale-07, #FFF);
+    /* Subtitle/S6_Regular_20 */
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 24px */
+    margin-bottom: 40px;
+}
+
+.about {
+    height:100vh;
+    background: no-repeat left url('../images/AboutBack.png');
+    background-position: bottom 20px left 0px;
+}
+
+.AboutWrap {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.AboutGrid {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 70px;
+    grid-row-gap: 70px;
+    margin-left: 130px;
+    margin-right: 60px;
+}
+
+.AboutMainTitle {
+    color: var(--grayscale-07, #FFF);
+    font-feature-settings: 'liga' off;
+    /* Title/T2_Bold_96 */
+    font-family: Outfit;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106%; 
+}
+
+.AboutSignature {
+    width:400px;
+    display:block;
+    color: var(--grayscale-07, #FFF);
+    /* Subtitle/S1_SemiBold_36 */
+    font-family: Outfit;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.AboutBack {
+    background: var(--primary-02, #A64CED);
+    border-radius: 30px;
+}
+
+.GridTitle {
+    color: var(--grayscale-07, #FFF);
+    font-feature-settings: 'liga' off;
+    /* Title/T4_Bold_48 */
+    font-family: Outfit;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106%;
+}
+
+.GridSignature {
+    margin-top: 20px;
+    color: var(--grayscale-07, #FFF);
+    /* Subtitle/S3_Regular_24 */
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; 
+}
+
+.HowWork {
+    position: relative;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.HowWork>img {
+    position: absolute;
+    display: block;
+    z-index: 99999;
+    margin-left: calc(50% - 150px);
+}
+
+.moving-text {
+    color: var(--secondary-01, #2FDBBC);
+    font-feature-settings: 'liga' off;
+    font-family: Outfit;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    z-index: 1;
+    position: absolute;
+    animation: moveText 10s linear infinite; /* Укажите длительность, тип анимации и количество повторений */
+    white-space: nowrap; /* Запретить перенос текста на новую строку */
+    overflow: hidden; /* Скрыть текст, который выходит за пределы блока */
+}
+
+
+
+@keyframes moveText {
+    0% { left: -60%; }/* Начальное положение текста за пределами блока */
+    100% { left: 100%; } /* Конечное положение текста за пределами блока */
+}
+
+.moving-text-2lvl {
+    top:200px;
+    color: var(--primary-02, #A64CED);
+    animation: moveText2lvl 10s linear infinite; /* Укажите длительность, тип анимации и количество повторений */
+    white-space: nowrap; /* Запретить перенос текста на новую строку */
+    overflow: hidden;   
+}
+
+@keyframes moveText2lvl {
+    0% { right: -30%; }/* Начальное положение текста за пределами блока */
+    100% { right: 100%; }
+}
+
+
+.moving-text-3lvl {
+    top:400px;
+    color: var(--secondary-02, #FFAA4C);
+    animation: moveText3lvl 10s linear infinite; /* Укажите длительность, тип анимации и количество повторений */
+    white-space: nowrap; /* Запретить перенос текста на новую строку */
+    overflow: hidden;   
+}
+
+@keyframes moveText3lvl {
+    0% { left: -20%; }/* Начальное положение текста за пределами блока */
+    100% { left: 110%; } /* Конечное положение текста за пределами блока */
+}
