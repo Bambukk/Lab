@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import image from '../images/image 9.png';
-
+import { NavLink, Outlet } from 'react-router-dom';
 
 const Container = styled.header`
     width:100%;
@@ -17,6 +17,9 @@ const NavBar = styled.div`
     justify-content: space-around;
     align-items: center;   
     margin-right:20px;
+    color: orange;
+    font-size:18px;
+    text-decoration: none;
 `
 
 const test = {
@@ -25,13 +28,7 @@ const test = {
   height:'60px',
 }
 
-const UILink = styled.a`
-  display:block;
-  color: orange;
-  font-size: 18px;
-  font-weight: bold;
-  cursor:pointer;
-`
+
 
 
 const Header = () => {
@@ -40,9 +37,9 @@ const Header = () => {
     <Container>
         <img style = {test} src={image}></img>
         <NavBar>
-          <UILink href="/">Characters</UILink>
-          <UILink href="/Comics">Comics</UILink>
-          <UILink href="/Series">Series</UILink>
+          <NavLink to="/"  style = {({isActive}) => ({color: isActive ? 'white' : 'orange' })}>Characters</NavLink>
+          <NavLink to="/Comics" style = {({isActive}) => ({color: isActive ? 'white' : 'orange' })}>Comics</NavLink>
+          <NavLink to="/Series" style = {({isActive}) => ({color: isActive ? 'white' : 'orange' })}>Series</NavLink>
         </NavBar>
     </Container>
   </>

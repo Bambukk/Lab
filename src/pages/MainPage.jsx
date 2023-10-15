@@ -11,7 +11,7 @@ const Characters = [
   {'TitleHero': 'Aaron Stack', 'Description': 'drjkuil2523'},
 ]
 
-const App = () => {
+const MainPage = () => {
   return (
     <>
       <Header></Header>
@@ -19,7 +19,8 @@ const App = () => {
       <Footer></Footer>
       <GlobalStyles></GlobalStyles>
     </>
+    
   )
 }
 
-export default App;
+export default MainPage;
