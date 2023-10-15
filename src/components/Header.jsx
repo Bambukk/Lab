@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import image from '../images/image 9.png';
-import Link from '../UI/Link';
 
 
 const Container = styled.header`
@@ -26,17 +25,27 @@ const test = {
   height:'60px',
 }
 
+const UILink = styled.a`
+  display:block;
+  color: orange;
+  font-size: 18px;
+  font-weight: bold;
+  cursor:pointer;
+`
+
 
 const Header = () => {
   return (
+    <>
     <Container>
         <img style = {test} src={image}></img>
         <NavBar>
-          <Link>Characters</Link>
-          <Link>Comics</Link>
-          <Link>Series</Link>
+          <UILink href="/">Characters</UILink>
+          <UILink href="/Comics">Comics</UILink>
+          <UILink href="/Series">Series</UILink>
         </NavBar>
     </Container>
+  </>
   )
 }
 

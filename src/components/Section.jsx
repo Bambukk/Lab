@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Hero from '../images/hero.jpg'
+import Card from './Card';
 
 const Container = styled.section`
     margin:30px;
@@ -47,48 +47,35 @@ const InputButton = styled.button`
 `
 
 const HeroCard = styled.div`
-    border:1px solid;
+    border-top:1px gray solid;
     margin-top:30px;
-    display:flex;
-    flex-direction:column;
-    width:230px;
-`
-
-const ImageHero = styled.img`
-    height:200px;
-`
-
-const CardTitle = styled.h3`
-    color:rgb(241,47,77);
-    padding:10px;
-    padding-bottom:0px;
-`
-const CardSubtitle = styled.h5`
-    color:rgb(208,208,208);
-    font-weight:200;
-    padding:10px;
-    padding-top:0px;
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    
 `
 
 
-const SectionCharacters = () => {
+
+const Section = ({title, Cards}) => {
   return (
     <Container>
         <TitleWrapper>
-            <SectionTitile>Characters</SectionTitile>
+            <SectionTitile>{title}</SectionTitile>
             <NumSignature>(1562)</NumSignature>
         </TitleWrapper>
         <InputWrapper>
-            <InputString placeholder= 'Search for characters by Name'></InputString>
+            <InputString placeholder= {title}></InputString>
             <InputButton>SEARCH</InputButton>
         </InputWrapper>
         <HeroCard>
-            <ImageHero src={Hero}></ImageHero>
-            <CardTitle>3-D Man</CardTitle>
-            <CardSubtitle>No description provided</CardSubtitle>
+            {
+                Cards.map((card,id)=> (
+                    <Card key = {id} Title = {card['TitleHero']} Description = {card['Description']} ></Card>
+                ))
+            }
         </HeroCard>
     </Container>
   )
 }
 
-export default SectionCharacters;
+export default Section;
